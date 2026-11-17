@@ -1,120 +1,137 @@
-# Crop Yield Prediction Using Machine Learning
+<div align="center">
 
-This repository contains a machine learning project focused on predicting crop yield using agricultural and climatic factors such as rainfall, fertilizer use, pesticide use, area under cultivation, and crop-related data.
+# 🌾 Crop Yield Prediction
 
-The project explores data preprocessing, visualization, feature selection, and model comparison to identify which regression algorithms provide the best yield predictions.
+### Machine learning experiments for understanding and estimating agricultural productivity
 
-## Project Overview
+<p>
+  <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=85" alt="Green agricultural fields under an open sky" width="100%" />
+</p>
 
-The goal is to analyze agricultural data and build predictive models that estimate crop yield using historical agricultural data. The repository includes:
+<p>
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Jupyter-Notebooks-F37626?logo=jupyter&logoColor=white" alt="Jupyter notebooks" />
+  <img src="https://img.shields.io/badge/Machine%20Learning-Regression-2E8B57" alt="Machine learning regression" />
+  <img src="https://img.shields.io/badge/Project-Educational-6C63FF" alt="Educational project" />
+</p>
 
-- Data exploration and preprocessing notebooks/scripts
-- Feature engineering and model evaluation
-- Multiple regression models for comparison
-- Visual analysis of crop, season, and state-wise trends
-- Dataset files for training and experimentation
+<p>
+  Explore agricultural data, visualize crop and climate trends, and compare regression approaches for crop-yield prediction.
+</p>
 
-## Repository Structure
+</div>
 
-```text
-crop_yeild_prediction_using_ml_college/
-├── code/
-│   ├── indian_agricultural_productivity_analysis_ffebf0.ipynb
-│   ├── indian_agricultural_productivity_analysis_ffebf0.py
-│   ├── projectcode.py
-│   ├── other analysis scripts and notebooks
-├── datasets/
-│   ├── crop_yield.csv
-│   ├── crop_yield_new.csv
-│   ├── final.csv
-│   ├── final_data.csv
-│   ├── rainfall.csv
-│   ├── temperature.csv
-│   ├── yield.csv
-│   └── other agricultural datasets
-├── images/
-├── videos/
-├── README.md
-└── .gitignore
+---
+
+## 🧭 Contents
+
+- [About](#-about)
+- [What’s inside](#-whats-inside)
+- [Project workflow](#-project-workflow)
+- [Repository layout](#-repository-layout)
+- [Technology stack](#-technology-stack)
+- [Getting started](#-getting-started)
+- [Notes and limitations](#-notes-and-limitations)
+
+## 🌱 About
+
+This educational project explores how agricultural and climate-related data can be used to analyze and predict crop yield. The notebooks investigate patterns across crops, seasons, states, and years, then experiment with data preparation and regression models.
+
+The work includes an Indian agricultural productivity analysis using features such as crop, state, season, area, production, annual rainfall, fertilizer, and yield. Other scripts explore additional model workflows.
+
+## ✨ What’s inside
+
+- 📊 Exploratory analysis and visualizations of agricultural trends
+- 🧹 Data inspection, preprocessing, categorical encoding, and transformation
+- 🌦️ Investigation of rainfall, fertilizer, crop, season, and regional patterns
+- 🤖 Regression experiments, including Linear Regression, Random Forest, and CatBoost
+- 📏 Evaluation with R², Mean Absolute Error (MAE), and Mean Squared Error (MSE)
+- 📓 Jupyter notebooks alongside Python scripts and datasets
+
+## 🔄 Project workflow
+
+```mermaid
+flowchart LR
+    A[📁 Agricultural data] --> B[🔎 Explore and clean]
+    B --> C[🧰 Prepare features]
+    C --> D[🤖 Train regression models]
+    D --> E[📏 Evaluate predictions]
+    E --> F[📊 Compare results]
 ```
 
-## Key Features
+## 🗂️ Repository layout
 
-- Crop yield analysis by year, state, season, and crop type
-- Data cleaning and transformation for model training
-- Exploratory data analysis (EDA) using charts and visualizations
-- Model experimentation with regression techniques such as:
-  - Linear Regression
-  - Random Forest Regressor
-  - CatBoost Regressor
-  - Gradient Boosting / stacked approaches
-- Evaluation using metrics like:
-  - R² score
-  - Mean Absolute Error (MAE)
-  - Mean Squared Error (MSE)
+```text
+.
+├── code/       # Analysis notebooks and Python scripts
+├── datasets/   # CSV and Excel data files
+├── images/     # Project images
+└── videos/     # Project videos
+```
 
-## Tools and Libraries Used
+A good place to start is the agricultural productivity notebook in `code/`:
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Plotly
-- Scikit-learn
-- TensorFlow / Keras (in some scripts)
-- CatBoost
+- `indian-agricultural-productivity-analysis-ffebf0.ipynb`
+- `indian_agricultural_productivity_analysis_ffebf0.py`
 
-## Dataset
+The primary crop-yield dataset used by that analysis is `datasets/crop_yield.csv`.
 
-The project uses CSV and Excel-based agricultural datasets stored in the `datasets/` directory. These include crop yield, fertilizer, rainfall, and temperature-related data used for analysis and prediction.
+## 🧰 Technology stack
 
-## How to Run
+| Area | Tools |
+| --- | --- |
+| Language and notebooks | Python, Jupyter, Google Colab |
+| Data analysis | Pandas, NumPy |
+| Visualization | Matplotlib, Seaborn, Plotly |
+| Machine learning | Scikit-learn, CatBoost |
+| Additional experiments | TensorFlow / Keras |
 
-1. Clone the repository:
+## 🚀 Getting started
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Hemanth-kumar-pujari/crop_yeild_prediction_using_ml_college.git
-```
-
-2. Navigate to the project folder:
-
-```bash
 cd crop_yeild_prediction_using_ml_college
 ```
 
-3. Open the notebooks in `code/` or run the Python scripts.
-
-4. Install dependencies:
+### 2. Install the analysis dependencies
 
 ```bash
-pip install pandas numpy matplotlib seaborn plotly scikit-learn tensorflow catboost openpyxl
+python -m pip install pandas numpy matplotlib seaborn plotly scikit-learn scipy statsmodels catboost openpyxl
 ```
 
-5. Run a script or notebook:
+Some scripts use TensorFlow and SciKeras; install those separately if you plan to run those experiments:
 
 ```bash
-python code/projectcode.py
+python -m pip install tensorflow scikeras
 ```
 
-## Example Use Cases
+### 3. Open a notebook or run a script
 
-- Predict crop yield based on soil and climate parameters
-- Understand how rainfall, temperature, and nutrient levels influence crop production
-- Compare model performance for agricultural forecasting
+Open a notebook from `code/` in Jupyter or Google Colab. For a Python script, run it from the repository root, for example:
 
-## Notes
+```bash
+python code/indian_agricultural_productivity_analysis_ffebf0.py
+```
 
-This project is primarily notebook-based and is suited for educational and research purposes. Some scripts may reference local file paths or specific dataset names, so they may require minor adjustments depending on your environment.
+Make sure the dataset path in the selected notebook or script points to a file available in your environment. Some notebooks use Google Colab's upload flow, and some scripts may need their local paths updated before running.
 
-## License
+## ⚠️ Notes and limitations
 
-This project is currently provided without a formal license file. If you plan to reuse or distribute it publicly, it is recommended to add a license such as MIT.
+- This is an educational/research project; results are exploratory and should not be treated as agronomic advice.
+- The repository contains multiple datasets and experiments. Verify that a dataset matches the script you intend to run.
+- Model scores depend on the dataset, preprocessing, and train/test split. Re-run the workflow to validate any reported metrics.
+- No license file is currently included. Please check with the repository owner before reuse or redistribution.
 
-## Author
+## 👤 Author
 
-Hemanth Kumar Pujari
+**Hemanth Kumar Pujari**
 
-## Acknowledgements
+---
 
-Thanks to the open-source data science and machine learning ecosystem for the libraries and tools used in this project.
+<div align="center">
+
+🌾 *Turning agricultural data into insights for smarter crop-yield analysis.*
+
+</div>
